@@ -237,10 +237,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											</ul>
 										</div>
 										<div class="login-right">
-											<form>
+											<form action="validarUsuario2.php" method="POST">
 												<h3>Inicia sesión con tu cuenta</h3>
-												<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">	
-												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">	
+												<h2>Usuario :</h2>
+												<input type="text" name="nombre"/>
+
+
+												<h2>Matricula:</h2>
+												<input type="password" name="password"/>
+												<br ><br />
 												
 												<input type="submit" value="Ingresar" >
 											</form>
@@ -304,7 +309,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											</ul>
 										</div>
 										<div class="login-right">
-											<form action = "enviando2.php" method="post" name="form"  >
+											<form action = "enviando.php" method="post" name="form"  >
 												<h3>Estudiante, crea tu cuenta</h3>
 												
 												      
