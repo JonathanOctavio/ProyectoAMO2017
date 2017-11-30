@@ -71,9 +71,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		 new WOW().init();
 	</script>
 <!--//end-animate-->
+<style type="text/css">
+<!--
+.Estilo1 {color: #FFFFFF}
+font-weight: bold;
+-->
+</style>
 
 </head>
-<body>
+<body><?php session_start(); ?>
 
 <div data-vide-bg="video/training2">
     <div class="center-container">
@@ -91,12 +97,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<input id="mobile_menu" type="checkbox">
 					   <ul class="nav">
 						 <li><a class="active" href="index.html">Inicio</a></li>
-						 <li><a href="about.html">Acerca de</a></li>
-						 <li><a href="courses.html">Temario</a></li>
-						 <li><a href="contact.html">Contacto</a></li>
-						 <li><a href="registro.php" >Registro alumno</a></li>
-						 <li><a href="registro2.php" >Registro docente</a></li>
-						 <li><a href="#" data-toggle="modal" data-target="#myModal">Iniciar Sesión</a></li>
+						 <li><a href="about.html">Alumnos</a></li>
+						 <li><a href="courses.html">Avisos</a></li>
+						 <li><a href="contact.html">Mis Cursos</a></li>
+						 <li><a href="registro.php" >Evaluación</a></li>
+						 <li><a href="" ></a></li>
+						 <li><a href="index.php" data-toggle="" data-target="#">Salir</a></li>
 					  </ul>
 				 </div>
 				<div class="clearfix"></div>
@@ -105,13 +111,106 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             <div class="socials">
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4dd797b06396480a"></script>
             </div>
+
 			<div class="box_1-top">
+				<?php
+$listar = null;
+$directorio = opendir ("files/");
+while($elemento = readdir($directorio))
+{
+	if($elemento != '.' && $elemento !='..')
+	{
+	if (is_dir("files/".$elemento))
+	{
+	  $listar .= "<li><a href='files/$elemento' target='_blank'>$elemento/</a></li>";
+	}
+	else
+	{
+	  $listar .= "<li><a href='files/$elemento' target='_blank'>$elemento</a></li>";
+	}
+	}
+}
+
+
+echo $listar
+?>
 				<div class="banner-info wow fadeInLeft animated" data-wow-delay=".5s">
-					<h3>Tu curso multimedia online</h3>
-					<h2>Fácil acceso, temas completos, dinamismo al aprender</h2>
+					<h2>Curso:  <?php echo $_SESSION["k_username"] ?></h2>
+					<h2>Estas en el curso</h2>
+<?php
+$listar = null;
+$directorio = opendir ("files/");
+while($elemento = readdir($directorio))
+{
+	if($elemento != '.' && $elemento !='..')
+	{
+	if (is_dir("files/".$elemento))
+	{
+	  $listar .= "<li><a href='files/$elemento' target='_blank'>$elemento/</a></li>";
+	}
+	else
+	{
+	  $listar .= "<li><a href='files/$elemento' target='_blank'>$elemento</a></li>";
+	}
+	}
+}
+
+
+echo $listar
+?>
+					<form action = "directorio.php" method="post" name="form"  >
+       				<h1 align="center">
 					
+         			 <h1 align="center">
+					<input type="submit" value="Mostrar Contenido" /> <br/><br/></h1>
+		
+        			</form>
+					<h2>Archivo subido con exito</h2>
+
+
+	
+
+
+
+
+					<form action = "curso2.php" method="post" enctype="multipart/form-data"  >
+       				<h1 align="center">
+					<input type="file" name="foto" /> <br/><br/></h1>
+         			 <h1 align="center">
+					<input type="submit" value="upload" /> <br/><br/></h1>
+		
+        			</form>
+
+
+
+					
+					</div>
+			</div>
+			
 					<a class="scroll" href="courses.html" class="hvr-shutter-in-vertical button">Conoce nuestro temario</a>
 				</div>
+
+				<?php
+$listar = null;
+$directorio = opendir ("files/");
+while($elemento = readdir($directorio))
+{
+	if($elemento != '.' && $elemento !='..')
+	{
+	if (is_dir("files/".$elemento))
+	{
+	  $listar .= "<li><a href='files/$elemento' target='_blank'>$elemento/</a></li>";
+	}
+	else
+	{
+	  $listar .= "<li><a href='files/$elemento' target='_blank'>$elemento</a></li>";
+	}
+	}
+}
+
+
+echo $listar
+?>
 			</div>
 		</div>
     </div>

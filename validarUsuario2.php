@@ -6,15 +6,15 @@ $password=$_REQUEST['password'];
   $link=mysqli_connect("localhost","root","");
   mysqli_select_db($link,"multiapp");
 $result = mysqli_query($link,
-'SELECT matricula,usuario,id_alumno FROM alumno WHERE usuario=\''.$usuario.'\'');
+'SELECT pass,usuario,tipo FROM alumnos WHERE usuario=\''.$usuario.'\'');
 
    if($row = mysqli_fetch_array($result))
       {
-        if($row["matricula"] == $password)
+        if($row["pass"] == $password)
            {
             $_SESSION["k_username"] = $row['usuario'];  
-             if ($row['id_alumno']==0) header("Location: indexADM.php");
-             else header("Location: courses.html");         
+             if ($row['tipo']==2) header("Location: acceprofe.php");
+             else header("Location: accealumno.php");         
            }
         else {
               print("Password incorrecto");

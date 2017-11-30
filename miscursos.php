@@ -71,6 +71,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		 new WOW().init();
 	</script>
 <!--//end-animate-->
+<style type="text/css">
+<!--
+.Estilo1 {color: #FFFFFF}
+font-weight: bold;
+-->
+</style>
 
 </head>
 <body>
@@ -91,12 +97,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<input id="mobile_menu" type="checkbox">
 					   <ul class="nav">
 						 <li><a class="active" href="index.html">Inicio</a></li>
-						 <li><a href="about.html">Acerca de</a></li>
-						 <li><a href="courses.html">Temario</a></li>
-						 <li><a href="contact.html">Contacto</a></li>
-						 <li><a href="registro.php" >Registro alumno</a></li>
-						 <li><a href="registro2.php" >Registro docente</a></li>
-						 <li><a href="#" data-toggle="modal" data-target="#myModal">Iniciar Sesión</a></li>
+						 <li><a href="about.html">Alumnos</a></li>
+						 <li><a href="courses.html">Avisos</a></li>
+						 <li><a href="contact.html">Mis Cursos</a></li>
+						 <li><a href="registro.php" >Evaluación</a></li>
+						 <li><a href="" ></a></li>
+						 <li><a href="index.php" data-toggle="" data-target="#">Salir</a></li>
 					  </ul>
 				 </div>
 				<div class="clearfix"></div>
@@ -107,9 +113,54 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             </div>
 			<div class="box_1-top">
 				<div class="banner-info wow fadeInLeft animated" data-wow-delay=".5s">
-					<h3>Tu curso multimedia online</h3>
-					<h2>Fácil acceso, temas completos, dinamismo al aprender</h2>
-					
+					<form action = "validarCurso.php" method="post" name="form"  >
+          <h1 align="center"><span class="Estilo1">Accede al curso.</span></h1>
+          <br/>
+         <br/>
+         <h1 align="center"><span class="Estilo1">Da el Titulo:</span></h1>
+         <h1 align="center">
+         <input type="text" name="titulo" /> 
+         <br/>
+         <br/>
+          <h1 align="center"><span class="Estilo1">Da el codigo:</span></h1>
+         <h1 align="center">
+         <input type="text" name="codigo" /> 
+         <br/>
+         <br/>
+         <input type="submit" class="#" value="Enviar" /> 
+                                             </h1>
+</form>
+					<h3></h3>
+					<h2>En este apartado podrá crear una nueva sección para impartir cursos a distancia, solo llene los campos con la información necesaria y la sección estará lista</h2>
+					</div>
+			</div>
+			<form action = "insertar2.php" method="post" name="form"  >
+          <h1 align="center"><span class="Estilo1">Adelante crea tu nueva sección.</span></h1>
+          <br/>
+         <br/>
+         <h1 align="center"><span class="Estilo1">Titulo:</span></h1>
+         <h1 align="center">
+         <input type="text" name="titulo" /> 
+         <br/>
+         <br/>
+ 		 <h1 align="center"><span class="Estilo1">Periodo:</span></h1>
+         <h1 align="center">
+         <input type="text" name="periodo" /> 
+         <br/>
+         <br/>
+  		 <h1 align="center"><span class="Estilo1">Profesor:</span></h1>
+         <h1 align="center">
+         <input type="text" name="profesor" /> 
+         <br/>
+         <br/>
+          <h1 align="center"><span class="Estilo1">Código:</span></h1>
+         <h1 align="center">
+         <input type="int" name="codigo" /> 
+         <br/>
+         <br/>
+         <input type="submit" class="#" value="Enviar" /> 
+                                             </h1>
+</form>
 					<a class="scroll" href="courses.html" class="hvr-shutter-in-vertical button">Conoce nuestro temario</a>
 				</div>
 			</div>

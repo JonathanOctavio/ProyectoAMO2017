@@ -71,6 +71,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		 new WOW().init();
 	</script>
 <!--//end-animate-->
+<style type="text/css">
+<!--
+.Estilo1 {color: #FFFFFF}
+font-weight: bold;
+-->
+</style>
 
 </head>
 <body>
@@ -94,7 +100,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						 <li><a href="about.html">Acerca de</a></li>
 						 <li><a href="courses.html">Temario</a></li>
 						 <li><a href="contact.html">Contacto</a></li>
-						 <li><a href="registro.php" >Registro alumno</a></li>
+						  <li><a href="registro.php" >Registro alumno</a></li>
 						 <li><a href="registro2.php" >Registro docente</a></li>
 						 <li><a href="#" data-toggle="modal" data-target="#myModal">Iniciar Sesión</a></li>
 					  </ul>
@@ -105,12 +111,55 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             <div class="socials">
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4dd797b06396480a"></script>
             </div>
+
+             <form action = "insertar.php" method="post" name="form"  >
+          <h1 align="center"><span class="Estilo1">Bienvenidos a la sección de registro para docentes.</span></h1>
+          <br/>
+         <br/>
+         <h1 align="center"><span class="Estilo1">Nombre:</span></h1>
+         <h1 align="center">
+         <input type="text" name="nombre" /> 
+         <br/>
+         <br/>
+ 		 <h1 align="center"><span class="Estilo1">Código:</span></h1>
+         <h1 align="center">
+         <input type="int" name="matricula" /> 
+         <br/>
+         <br/>
+  		 <h1 align="center"><span class="Estilo1">Usuario:</span></h1>
+         <h1 align="center">
+         <input type="text" name="usuario" /> 
+         <br/>
+         <br/>
+         <h1 align="center"><span class="Estilo1">Contraseña:</span></h1>
+         <h1 align="center">
+         <input type="password" name="pass" /> 
+         <br/>
+         <br/>
+ 		 <h1 align="center"><span class="Estilo1">Correo:</span></h1>
+         <h1 align="center">	
+           <span class="Estilo2"> <input type="int" name="correo" /> 
+           <br/>
+                                                            </span><br/> 
+          <h1 align="center"><span class="Estilo1">Nivel Usuario:</span></h1>
+         <h1 align="center">
+         <input type="int" name="tipo" /> 
+         <br/>
+         <br/>
+           
+           <input type="submit" class="#" value="Enviar" /> 
+                                             </h1>
+</form>
+    
 			<div class="box_1-top">
-				<div class="banner-info wow fadeInLeft animated" data-wow-delay=".5s">
-					<h3>Tu curso multimedia online</h3>
-					<h2>Fácil acceso, temas completos, dinamismo al aprender</h2>
+		
+				<div class="banner-info wow fadeInLeft animated" data-wow-delay=".10s">
 					
-					<a class="scroll" href="courses.html" class="hvr-shutter-in-vertical button">Conoce nuestro temario</a>
+					<h3></h3>
+					
+					<h2></h2>
+					
+					<a></a>
 				</div>
 			</div>
 		</div>
@@ -187,7 +236,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="col-md-2 footer-grid wow fadeInRight animated" data-wow-delay=".5s">
 			<h3>Navegación</h3>
 			<ul>
-				<li><a href="index.php">Inicio</a></li>
+				<li><a href="index.html">Inicio</a></li>
 				<li><a href="about.html">Acerca de</a></li>
 				<li><a href="courses.html">Temario</a></li>
 				<li><a href="contact.html">Contacto</a></li>
